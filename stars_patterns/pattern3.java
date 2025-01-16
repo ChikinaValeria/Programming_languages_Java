@@ -1,13 +1,13 @@
 public class pattern3 {
     
     public static void main(String[] args) {
-        int raws = 10;
-        for (int i=1; i <= raws; i++){
+        int rows = 10;
+        for (int i=1; i <= rows; i++){
             for (int j=1; j<i; j++){
                 System.out.print(" ");
             }
             
-            System.out.print("*".repeat(raws-i+1));
+            System.out.print("*".repeat(rows-i+1));
             System.out.println();
         }
 
