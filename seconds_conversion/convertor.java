@@ -22,6 +22,7 @@ public class convertor {
         System.out.println("Come on, it has to at least look like an integer number!");
         System.out.println(e);
        }
+       scan.close();
        
        
 }
