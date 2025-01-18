@@ -9,6 +9,11 @@ public class pattern4 {
             }
             System.out.println();
         }
+        for (int i=rows; i>0; i--){
+            System.out.print(" ".repeat(rows-i));
+            System.out.print("*".repeat(i*2-1));
+            System.out.println();
+        }
 
     }
 }
