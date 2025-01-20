@@ -9,7 +9,7 @@ public class convertor {
 
        try {
        long seconds = scan.nextLong();
-       if (seconds < 0) { // Проверяем на отрицательные значения
+       if (seconds < 0) { 
            System.out.println("Seconds cannot be negative. Please try again later.");
        }else {
            long hours = seconds / 3600;
