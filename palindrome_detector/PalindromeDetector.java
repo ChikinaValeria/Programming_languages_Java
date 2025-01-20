@@ -5,7 +5,7 @@ public class PalindromeDetector {
         Scanner scan = new Scanner(System.in);
         System.out.println("Would you like me to inspect your text for palindrome? Please, enter your text!");
         boolean continueDetecting = true;
-        while (continueDetecting=true) {
+        while (continueDetecting == true) {
             String userInput = scan.nextLine();
             String cleanedInput = userInput.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
 
