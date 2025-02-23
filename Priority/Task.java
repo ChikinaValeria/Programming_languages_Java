@@ -1,14 +1,15 @@
 
 
-public class Task implements Priority{
+public class Task implements Priority, Complexity{
     private String name, description;
-    public int priority;
+    public int priority, complexity;
     public boolean done;
 
-    public Task(String initName, String initDesctiption, int initPriority){
+    public Task(String initName, String initDesctiption, int initPriority, int initComplexity){
         name = initName;
         description = initDesctiption;
         priority= initPriority;
+        complexity = initComplexity;
         done = false;
     }
     public void setPriority(int newPriority){
@@ -16,6 +17,12 @@ public class Task implements Priority{
     }
     public int getPriority(){
         return priority;
+    }
+    public void setComplexity(int newComplexity){
+        complexity = newComplexity;
+    }
+    public int getComplexity(){
+        return complexity;
     }
     public String getName(){
         return name;
@@ -41,6 +48,6 @@ public class Task implements Priority{
     }
     public String toString(){
         return "Task: " + name + "\nDescription: " + description + "\nPriority: "
-                + priority + "\nThe task is " + getDone();
+                + priority + "\nComplexity: " + complexity + "\nThe task is " + getDone();
     }
 }
