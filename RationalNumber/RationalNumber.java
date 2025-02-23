@@ -1,5 +1,6 @@
-public class RationalNumber {
+public class RationalNumber implements Comparable<RationalNumber>{
     private int numerator, denominator;
+    private static final double TOLERANCE = 0.0001;
 
     public RationalNumber(int numer, int denom)
    {
@@ -17,7 +18,18 @@ public class RationalNumber {
 
       reduce();
    }
+   public int compareTo(RationalNumber obj2){
+      double thisValue = (double) numerator / denominator;
+      double otherValue = (double) obj2.numerator / obj2.denominator;
 
+      if (Math.abs(thisValue - otherValue) < TOLERANCE) {
+          return 0; // values are considered equal
+      } else if (thisValue < otherValue) {
+          return -1; // thisValue is smaller
+      } else {
+          return 1; // other value is smaller
+    }
+   }
    public int getNumerator(){
       return numerator;
    }
