@@ -3,7 +3,6 @@ public class Coin implements Lockable{
    private final int TAILS = 1;
    private int code = 0;
    private boolean locked = false;
-
    private int face;
 
    public Coin(){

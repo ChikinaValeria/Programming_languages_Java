@@ -1,7 +1,7 @@
 public class Task implements Priority, Complexity, Comparable<Task>{
-    private String name, description;
-    public int priority, complexity;
-    public boolean done;
+    String name, description;
+    private int priority, complexity;
+    private boolean done;
 
     public Task(String initName, String initDescription, int initPriority, int initComplexity){
         name = initName;
