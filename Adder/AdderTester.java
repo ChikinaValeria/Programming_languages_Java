@@ -4,6 +4,7 @@ public class AdderTester {
         float myFloat = Adder.add(5.5f, 10.5f);
         String myString = Adder.add("Mary and ", "John");
         char myChar = Adder.add('!', 'B');
+        
 
         System.out.println("The sum of integers is: " + myInteger);
         System.out.println("The sum of floats is: " + myFloat);
