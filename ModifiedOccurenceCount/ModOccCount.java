@@ -1,25 +1,26 @@
 import java.util.Scanner;
 
-public class OccCount {
+public class ModOccCount {
 
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter numbers between 0 and 50 including!");
+        System.out.println("Enter numbers between -25 and 25 including!");
         int myInt = scan.nextInt();
         int[] myList = new int[51];
         
-        while (0 <= myInt && myInt <= 50){
-            myList[myInt]++;
+        while (-25 <= myInt && myInt <= 25){
+            myList[myInt+25]++;
             myInt = scan.nextInt();          
         }
         
         for (int i = 0; i < 51; i++){
             if (myList[i] >= 1) {
-                System.out.println(i + " - " + myList[i]);
-            }  
-        }
+                System.out.println(i-25 + " - " + myList[i]);
+            }    
+        }     
     }
+    
 
     
 }
