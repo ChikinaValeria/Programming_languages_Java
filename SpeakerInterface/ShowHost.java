@@ -20,7 +20,7 @@ public class ShowHost implements Speaker{
     }
     @Override
     public void announce(String myString){
-        System.out.println("We are happe to present you amazing " + myString + "!");
+        System.out.println("We are happy to present you amazing " + myString + "!");
     }
 
 }
