@@ -28,23 +28,19 @@ public class Staff
 
       ((Hourly)staffList[3]).addHours(40);
    }
-   public void payday()
-   {
-      double amount;
+   public void payday() {
+    for (Payable person : staffList) {
+       System.out.println(person);
 
-      for (int count=0; count < staffList.length; count++)
-      {
-         System.out.println(staffList[count]);
+       double amount = person.pay();  // полиморфный вызов
 
-         amount = staffList[count].pay();  // polymorphic
+       if (amount == 0.0)
+          System.out.println("Thanks!");
+       else
+          System.out.println("Paid: " + amount);
 
-         if (amount == 0.0)
-            System.out.println("Thanks!");
-         else
-            System.out.println("Paid: " + amount);
-
-         System.out.println("-----------------------------------");
-      }
-   }
+       System.out.println("-----------------------------------");
+    }
+ }
 }
 
